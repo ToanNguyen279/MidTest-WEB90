@@ -57,7 +57,9 @@ const editPost = async (req, res) => {
         }
 
         findPost.content = content
+
         findPost.updateAt = Date.now()
+
         await findPost.save()
 
         res.send({
@@ -72,9 +74,6 @@ const editPost = async (req, res) => {
             message: error.message
         })
     }
-
-
-
 }
 
 export { createPost, editPost }

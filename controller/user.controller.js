@@ -14,7 +14,7 @@ const getAllUser = async (req, res) => {
     } catch (error) {
         res.send({
             status: 500,
-            message: error.message,
+            message: error.message
         });
     }
 }
